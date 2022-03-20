@@ -4,9 +4,140 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>🌤️ Weather on Demand 🌤️</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shizuru&family=Smooch+Sans:wght@100;200&family=Syncopate&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>Hello Git!</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <form id="search-form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search your city"
+            />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+
+        <div class="col-4" id="date">
+          <div class="liveDate"></div>
+          <div class="liveTime"></div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-2" id="header">Currently In:</div>
+        </div>
+  
+        <div class="row">
+          <div class="col-7" id="city-searched"></div>
+          <div class="col-2" id="card-temp">
+            <h5 class="currentTemp" id="temperature-id"></h5>
+          </div>
+
+          <div class="col-3" id="weatherList">
+            <ul>
+              <li id="precip">Precipitation:</li>
+              <li id="humidity">Humidity:</li>
+              <li id="wind">Wind:</li>
+            </ul>
+          </div>
+        </div>
+   <br />
+        <h1>
+          <div class="row">
+            <div class="col-7">       
+            5 Day Forecast
+            </div>
+          
+  
+          <div class="col-4">
+              <span class="units">
+                  <a href="#" id="fahrenheit-link">°F </a> /
+                  <a href="#" id="celsius-link">°C</a>
+                </span>
+          </div>
+        </div>
+      </h1>
+
+      <hr class="divider" />
+          
+          <div class="row">
+              <div class="col-1">
+                 
+                </div>
+            <div class="col-2">
+              <div class="card" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">☀️</h5>
+                  <h6 class="card-subtitle">65°F</h6>
+                  <p class="card-text">Day 1</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">🌤️</h5>
+                  <h6 class="card-subtitle">57°F</h6>
+                  <p class="card-text">Day 2</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">🌥️</h5>
+                  <h6 class="card-subtitle">50°F</h6>
+                  <p class="card-text">Day 3</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">🌦️</h5>
+                  <h6 class="card-subtitle">45°F</h6>
+                  <p class="card-text">Day 4</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-2">
+              <div class="card" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">⛈️</h5>
+                  <h6 class="card-subtitle">46 °F</h6>
+                  <p class="card-text">Day 5</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+                 
+              </div>
+          </div>
+        </div>
+      </div>
+  
+    
+      
+
+     
+     <div class="row">
+       <div class="col-9"></div>
+       <div class="col-2" id="author">Coded by: Zenita H.</div>
+    </div>
+    <div class="col-1"></div>"
+    <script src="src/script.js"></script>
   </body>
 </html>

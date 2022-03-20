@@ -1,0 +1,177 @@
+body {
+  background-image: url(/images/weather1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Smooch Sans", sans-serif;
+}
+
+.container {
+  margin-top: 20px;
+  background-color: rgba(38, 42, 63, 0.666);
+  padding: 2%;
+  border-radius: 0.5%;
+  margin-left: 35%;
+  min-width: 500px;
+  min-height: 500px;
+  height: 75%;
+  z-index: 0;
+}
+
+#search-form {
+  text-align: left;
+  z-index: 1;
+  font-family: "Smooch Sans", sans-serif;
+}
+
+#header {
+  font-size: 24px;
+  background-color: rgba(38, 42, 63, 0);
+  color: white;
+  text-align: left;
+}
+
+.cityHeader {
+  font-size: 105px;
+  background-color: rgba(38, 42, 63, 0);
+  color: white;
+}
+
+#date {
+  text-align: right;
+  color: white;
+
+  text-align: right;
+}
+
+.dateTitle {
+  font-size: 24px;
+  color: white;
+}
+
+.liveDate {
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
+}
+
+.liveTime {
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
+}
+.card-title {
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+
+.card-temp {
+  position: absolute;
+  display: block;
+  right: 15%;
+  top: 20%;
+  padding: 1px;
+  background-color: rgba(38, 42, 63, 0);
+}
+.card {
+  padding: 5px;
+  background-color: rgba(38, 42, 63, 0.4);
+  border: 5%;
+  border-color: white;
+}
+
+h1 {
+  text-align: left;
+  color: white;
+  background-color: rgba(38, 42, 63, 0);
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgba(255, 115, 0, 0.877);
+  cursor: pointer;
+}
+
+.card-subtitle {
+  font-size: 26px;
+  margin-top: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.card-text {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.currentTemp {
+  font-size: 124px;
+  font-weight: 700;
+  color: white;
+}
+
+.tempCategory {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 1%;
+}
+
+#author {
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+  text-align: right;
+}
+
+.col {
+  margin-left: 60px;
+}
+
+#divider {
+  color: white;
+  font-weight: 200px;
+}
+
+.row {
+  margin: 0%;
+}
+
+ul {
+  color: white;
+  font-size: 26px;
+  list-style-type: none;
+  line-height: 29px;
+  margin-top: 28px;
+}
+
+#city-searched {
+  color: white;
+  font-size: 105px;
+}
