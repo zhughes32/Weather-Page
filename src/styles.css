@@ -154,7 +154,7 @@ textarea {
   margin-left: 60px;
 }
 
-#divider {
+.divider {
   color: white;
   font-weight: 200px;
 }
@@ -175,8 +175,15 @@ ul {
   color: white;
   font-size: 105px;
 }
+
 .gitHub {
   font-size: 22px;
   font-weight: 400;
   color: white;
+}
+
+#description {
+  color: rgba(255, 115, 0, 0.877);
+  text-transform: capitalize;
+  font-size: 36px;
 }

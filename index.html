@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🌤️ Weather on Demand 🌤️</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,9 +47,13 @@
 
           <div class="col-3" id="weatherList">
             <ul>
-              <li id="precip">Precipitation:</li>
+              <li id="description"></li>
               <li id="humidity">Humidity:</li>
               <li id="wind">Wind:</li>
+              <li><img 
+                src="http://openweathermap.org/img/wn/10d@2x.png" 
+                alt="Clear"
+                id="weatherIcon"></li>
             </ul>
           </div>
         </div>
@@ -61,12 +65,12 @@
             </div>
           
   
-          <div class="col-4">
+          <div class="col-2">
               <span class="units">
                   <a href="#" id="fahrenheit-link">°F </a> /
                   <a href="#" id="celsius-link">°C</a>
                 </span>
-          </div>
+          </div>     
         </div>
       </h1>
 
@@ -133,11 +137,12 @@
       
 
      
-        <div class="row">
+     <div class="row">
        <div class="col-7"></div>
-       <div class="col-4" id="author">Coded by: Zenita H. on 👉🏾 <span><a href = "https://github.com/zhughes32/Weather-Page" class="gitHub">GitHub</a></span> 👈🏾</div>
+       <div class="col-4" id="author">Coded by: Zenita H. on 👉🏾 <span><a href = "https://github.com/zhughes32/Weather-Page" class="gitHub">Open Source</a></span> 👈🏾</div>
     </div>
     <div class="col-1"></div>"
+    
     <script src="src/script.js"></script>
   </body>
 </html>
