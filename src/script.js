@@ -94,8 +94,6 @@ function citySearch(event) {
 
   let citySearch = document.querySelector("#city-searched");
 
-  citySearch("Oklahoma City");
-
   if (searchInput.value) {
     citySearch.innerHTML = searchInput.value;
     let apiKey = "af7487e3933154444dd5365e550b34dc";
