@@ -88,25 +88,27 @@ let searchInput = document.querySelector("#search-input");
 
 function citySearch(event) {
   event.preventDefault();
-  searchInput.innerHTML = `Currently in ${searchInput}`;
-
-  console.log(searchInput.value);
-
-  let citySearch = document.querySelector("#city-searched");
 
   if (searchInput.value) {
-    citySearch.innerHTML = searchInput.value;
-    let apiKey = "af7487e3933154444dd5365e550b34dc";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=imperial`;
-    axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+    cityNameSearch(searchInput.value);
   } else {
-    citySearch.innerHTML = null;
+    searchInput.innerHTML = null;
     alert("Please enter a city");
   }
 }
 
 let cityForm = document.querySelector("#search-form");
 cityForm.addEventListener("submit", citySearch);
+
+function cityNameSearch(cityName) {
+  let apiKey = "af7487e3933154444dd5365e550b34dc";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+}
+
+cityNameSearch("Oklahoma City");
+
+//= `Currently in ${searchInput}`;
 
 //temperature
 let fahrenheitTemp = null;
@@ -118,15 +120,17 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 function showTemperature(response) {
+  let citySearch = document.querySelector("#city-searched");
+  citySearch.innerHTML = response.data.name;
+
   console.log(response.data);
+  fahrenheitTemp = Math.round(response.data.main.temp);
 
   let temperature = Math.round(fahrenheitTemp);
   let humidity = Math.round(response.data.main.humidity);
   let description = response.data.weather[0].description;
   let wind = Math.round(response.data.wind.speed);
   let icon = response.data.weather[0].icon;
-
-  fahrenheitTemp = Math.round(response.data.main.temp);
 
   let showWind = document.querySelector("#wind");
   let showTemp = document.querySelector("#temperature-id");
