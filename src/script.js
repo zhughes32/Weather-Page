@@ -83,6 +83,22 @@ function liveTime() {
 console.log(liveDate(now));
 console.log(liveTime(now));
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
 //city search engine
 let searchInput = document.querySelector("#search-input");
 
@@ -113,24 +129,26 @@ cityNameSearch("Oklahoma City");
 //forecast
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri"];
-
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2" style="width: 16rem;"
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2" style="width: 16rem;"
   <div class="card-body">
-    <img src="http://openweathermap.org/img/wn/50d@2x.png" 
+    <img src="http://openweathermap.org/img/wn/${
+      forecastDay.weather[0].icon
+    }@2x.png" 
     alt=""
     id="weatherIcon"
     </>
-    <h6 class="forecast-weather">65°F</h6>
-    <p class="forecast-day">${day}</p>
+    <h6 class="forecast-weather">${Math.round(forecastDay.temp.day)}°F</h6>
+    <p class="forecast-day">${formatDay(forecastDay.dt)}</p>
 </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
