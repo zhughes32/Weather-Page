@@ -107,29 +107,29 @@ function cityNameSearch(cityName) {
 }
 
 cityNameSearch("Oklahoma City");
-displayForecast();
 
 //= `Currently in ${searchInput}`;
 
 //forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri"];
 
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `<div class="col-2"
+      `<div class="col-2" style="width: 16rem;"
   <div class="card-body">
     <img src="http://openweathermap.org/img/wn/50d@2x.png" 
     alt=""
     id="weatherIcon"
     </>
     <h6 class="forecast-weather">65°F</h6>
-    <p class="forecast-day">Mon</p>
+    <p class="forecast-day">${day}</p>
 </div>`;
   });
 
@@ -148,9 +148,8 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function getForecast(coordinates) {
   let apiKey = "af7487e3933154444dd5365e550b34dc";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
 
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 

@@ -116,7 +116,7 @@ a:hover {
 
 .forecast-day {
   text-align: center;
-  margin-top: 22px;
+  margin-top: 32px;
   font-weight: 600;
   color: white;
 }
@@ -190,6 +190,7 @@ ul {
 }
 
 #weatherIcon {
-  text-align: center;
+  display: block;
+  margin: auto;
   font-size: 26px;
 }
