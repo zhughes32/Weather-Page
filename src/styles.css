@@ -106,16 +106,17 @@ a:hover {
   cursor: pointer;
 }
 
-.card-subtitle {
+.forecast-weather {
+  text-align: center;
   font-size: 26px;
   margin-top: 15px;
   font-weight: 700;
   color: white;
 }
 
-.card-text {
+.forecast-day {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 22px;
   font-weight: 600;
   color: white;
 }
@@ -186,4 +187,9 @@ ul {
   color: rgba(255, 115, 0, 0.877);
   text-transform: capitalize;
   font-size: 36px;
+}
+
+#weatherIcon {
+  text-align: center;
+  font-size: 26px;
 }
