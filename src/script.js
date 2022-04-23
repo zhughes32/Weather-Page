@@ -156,13 +156,6 @@ function displayForecast(response) {
 }
 
 //temperature
-let fahrenheitTemp = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
 
 function getForecast(coordinates) {
   let apiKey = "af7487e3933154444dd5365e550b34dc";
@@ -200,19 +193,6 @@ function showTemperature(response) {
   );
 
   getForecast(response.data.coord);
-}
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-id");
-  temperatureElement.innerHTML = `${fahrenheitTemp}°F`;
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-id");
-  let celsiusTemp = (fahrenheitTemp - 32) * (5 / 9);
-  temperatureElement.innerHTML = `${Math.round(celsiusTemp)}°C`;
 }
 
 //no location button yet
